@@ -1,0 +1,138 @@
+.country-selector {
+  position: relative;
+  width: 100%;
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+.country-search {
+  position: relative;
+  width: 100%;
+}
+
+.country-search-input {
+  width: 100%;
+  padding: 12px 40px 12px 16px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-size: 16px;
+  line-height: 1.5;
+  transition: border-color 0.2s ease;
+}
+
+.country-search-input:focus {
+  outline: none;
+  border-color: var(--primary-color);
+  box-shadow: 0 0 0 3px rgba(255, 107, 107, 0.1);
+}
+
+.country-clear-btn {
+  position: absolute;
+  right: 8px;
+  top: 50%;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  padding: 4px;
+  cursor: pointer;
+  color: #666;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.2s ease;
+}
+
+.country-clear-btn:hover {
+  background-color: #f0f0f0;
+  color: #333;
+}
+
+.country-list {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  max-height: 300px;
+  overflow-y: auto;
+  background: white;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  margin-top: 4px;
+  padding: 4px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+  display: none;
+}
+
+.country-item {
+  display: flex;
+  align-items: center;
+  padding: 8px 12px;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: background-color 0.2s ease;
+}
+
+.country-item:hover,
+.country-item:focus {
+  background-color: #f5f5f5;
+  outline: none;
+}
+
+.country-item[aria-selected="true"] {
+  background-color: #fff2f2;
+}
+
+.country-item img {
+  margin-right: 12px;
+  border-radius: 2px;
+}
+
+.country-name {
+  flex: 1;
+  font-weight: 500;
+}
+
+.country-native-name {
+  color: #666;
+  font-size: 14px;
+  margin-left: 8px;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+  .country-selector {
+    max-width: 100%;
+  }
+
+  .country-search-input {
+    font-size: 16px; /* Prevent zoom on iOS */
+    padding: 10px 36px 10px 12px;
+  }
+
+  .country-item {
+    padding: 12px; /* Larger touch target */
+  }
+
+  .country-native-name {
+    display: none; /* Hide native name on mobile to save space */
+  }
+}
+
+/* Fallback styles when JS is disabled */
+.no-js .country-selector {
+  position: static;
+}
+
+.no-js .country-search {
+  display: none;
+}
+
+.no-js .country-list {
+  position: static;
+  display: block;
+  max-height: none;
+  border: none;
+  box-shadow: none;
+}

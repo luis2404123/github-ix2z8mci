@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Register - QRLingo</title>
+  <meta name="description" content="Create a QRLingo account to access effortless document translation services." />
+  <link rel="icon" href="https://i.imgur.com/h3orAdG.png" type="image/png" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- Container -->
+  <div class="container">
+    <!-- Left Side - Registration Form -->
+    <div class="left-side">
+      <div class="form-container">
+        <!-- Logo -->
+        <div class="logo">
+          <img src="https://i.imgur.com/h3orAdG.png" alt="QRLingo Logo" />
+        </div>
+
+        <!-- Welcome Text -->
+        <h1>Create Your Account</h1>
+        <p class="subheading">Join QRLingo and start translating effortlessly.</p>
+
+        <!-- Social Signup Buttons -->
+        <div class="social-login">
+          <button class="social-btn google-btn">
+            <img src="https://img.icons8.com/color/24/google-logo.png" alt="Google Logo" /> Sign up with Google
+          </button>
+          <button class="social-btn linkedin-btn">
+            <img src="https://img.icons8.com/color/24/linkedin.png" alt="LinkedIn Logo" /> Sign up with LinkedIn
+          </button>
+        </div>
+
+        <!-- Divider -->
+        <div class="divider">
+          <span>or sign up with email</span>
+        </div>
+
+        <!-- Registration Form -->
+        <form id="register-form">
+          <!-- Full Name Field -->
+          <div class="input-group">
+            <div class="input-icon">
+              <span class="material-symbols-outlined">person</span>
+            </div>
+            <input type="text" id="fullname" placeholder="Full Name" required />
+          </div>
+
+          <!-- Email Field -->
+          <div class="input-group">
+            <div class="input-icon">
+              <span class="material-symbols-outlined">mail</span>
+            </div>
+            <input type="email" id="email" placeholder="Email" required />
+          </div>
+
+          <!-- Password Field -->
+          <div class="input-group">
+            <div class="input-icon">
+              <span class="material-symbols-outlined">lock</span>
+            </div>
+            <input type="password" id="password" placeholder="Password" required />
+            <div class="password-toggle" id="togglePassword">
+              <span class="material-symbols-outlined">visibility</span>
+            </div>
+          </div>
+
+          <!-- Confirm Password Field -->
+          <div class="input-group">
+            <div class="input-icon">
+              <span class="material-symbols-outlined">lock</span>
+            </div>
+            <input type="password" id="confirm-password" placeholder="Confirm Password" required />
+            <div class="password-toggle" id="toggleConfirmPassword">
+              <span class="material-symbols-outlined">visibility</span>
+            </div>
+          </div>
+
+          <!-- Message Container -->
+          <div class="message" style="display: none;"></div>
+
+          <!-- Submit Button -->
+          <button type="submit" class="login-btn">Sign Up</button>
+        </form>
+
+        <!-- Log In Link -->
+        <p class="signup-link">
+          Already have an account? <a href="../Login/login.html">Log in here</a>
+        </p>
+      </div>
+    </div>
+
+    <!-- Right Side - Slideshow -->
+    <div class="right-side">
+      <!-- Overlay for blur effect -->
+      <div class="overlay"></div>
+      <div class="slideshow-container">
+        <!-- Slides -->
+        <div class="mySlides fade">
+          <div class="slide-content">
+            <h2>Effortless Document Translation</h2>
+            <p>Break language barriers instantly with real-time translations using our AI and QR code technology.</p>
+          </div>
+          <!-- Dots -->
+          <div class="dot-container">
+            <span class="dot" data-slide="0"></span>
+            <span class="dot" data-slide="1"></span>
+            <span class="dot" data-slide="2"></span>
+          </div>
+        </div>
+
+        <div class="mySlides fade">
+          <div class="slide-content">
+            <h2>Translate into 32+ Languages</h2>
+            <p>Share your documents globally with support for over 32 languages at your fingertips.</p>
+          </div>
+          <!-- Dots -->
+          <div class="dot-container">
+            <span class="dot" data-slide="0"></span>
+            <span class="dot" data-slide="1"></span>
+            <span class="dot" data-slide="2"></span>
+          </div>
+        </div>
+
+        <div class="mySlides fade">
+          <div class="slide-content">
+            <h2>Secure and Fast</h2>
+            <p>Experience secure and fast document translation without compromising quality.</p>
+          </div>
+          <!-- Dots -->
+          <div class="dot-container">
+            <span class="dot" data-slide="0"></span>
+            <span class="dot" data-slide="1"></span>
+            <span class="dot" data-slide="2"></span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- JavaScript -->
+  <script type="module" src="../js/auth/registerHandler.js"></script>
+</body>
+</html>

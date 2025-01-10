@@ -1,0 +1,24 @@
+{
+  "name": "qrlingo",
+  "version": "1.0.0",
+  "description": "QRLingo - Effortless Document Translation",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "keywords": [
+    "translation",
+    "qr-code",
+    "document-translation"
+  ],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@supabase/supabase-js": "2.39.3"
+  },
+  "devDependencies": {
+    "vite": "5.0.12"
+  }
+}

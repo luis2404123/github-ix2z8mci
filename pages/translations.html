@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Translations - QRLingo</title>
+  <link rel="icon" href="https://i.imgur.com/h3orAdG.png" type="image/png" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+  <link rel="stylesheet" href="../css/dashboard.css" />
+  <link rel="stylesheet" href="../css/translations.css" />
+  <link rel="stylesheet" href="../css/components/file-upload.css" />
+  <link rel="stylesheet" href="../css/components/country-selector.css" />
+  <noscript>
+    <style>
+      .js-only { display: none !important; }
+    </style>
+  </noscript>
+</head>
+<body>
+  <div class="dashboard-container">
+    <!-- Sidebar -->
+    <aside class="sidebar">
+      <div class="logo">
+        <img src="https://i.imgur.com/h3orAdG.png" alt="QRLingo Logo" />
+      </div>
+      <nav class="sidebar-nav">
+        <a href="../dashboard.html" class="nav-item">
+          <span class="material-symbols-outlined">dashboard</span>
+          Dashboard
+        </a>
+        <a href="translations.html" class="nav-item active">
+          <span class="material-symbols-outlined">translate</span>
+          Translations
+        </a>
+        <a href="qr-codes.html" class="nav-item">
+          <span class="material-symbols-outlined">qr_code_2</span>
+          QR Codes
+        </a>
+        <a href="settings.html" class="nav-item">
+          <span class="material-symbols-outlined">settings</span>
+          Settings
+        </a>
+      </nav>
+      <button id="logout-btn" class="logout-btn">
+        <span class="material-symbols-outlined">logout</span>
+        Logout
+      </button>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="main-content">
+      <header class="dashboard-header">
+        <div class="header-left">
+          <h1>Translations</h1>
+        </div>
+        <div class="header-right">
+          <button id="new-translation-btn" class="primary-btn">
+            <span class="material-symbols-outlined">add</span>
+            New Translation
+          </button>
+        </div>
+      </header>
+
+      <!-- Translation List -->
+      <div class="translations-container">
+        <div class="filters">
+          <input type="text" placeholder="Search translations..." class="search-input" />
+          <select class="filter-select">
+            <option value="all">All Status</option>
+            <option value="pending">Pending</option>
+            <option value="completed">Completed</option>
+            <option value="failed">Failed</option>
+          </select>
+        </div>
+
+        <div class="translations-list" id="translations-list">
+          <!-- Translations will be dynamically added here -->
+        </div>
+      </div>
+    </main>
+  </div>
+
+  <!-- New Translation Modal -->
+  <div id="translation-modal" class="modal">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h2>New Translation</h2>
+        <button class="close-btn">&times;</button>
+      </div>
+      <form id="translation-form">
+        <div class="form-group file-upload">
+          <label>Upload Document</label>
+          <div class="file-input-container">
+            <input type="file" id="document" accept=".pdf,.doc,.docx,.txt" required />
+            <div class="upload-content">
+              <span class="material-symbols-outlined upload-icon">cloud_upload</span>
+              <p class="upload-text">
+                Drag and drop your file here<br>
+                or click to browse
+              </p>
+            </div>
+          </div>
+          <div id="file-preview" class="file-preview"></div>
+        </div>
+        
+        <div class="form-group">
+          <label for="source-country">Source Language</label>
+          <div id="source-country"></div>
+        </div>
+        
+        <div class="form-group">
+          <label for="target-country">Target Language</label>
+          <div id="target-country"></div>
+        </div>
+        
+        <button type="submit" class="primary-btn">
+          <span class="material-symbols-outlined">translate</span>
+          Start Translation
+        </button>
+      </form>
+    </div>
+  </div>
+
+  <script type="module">
+    import { CountrySelector } from '../js/components/CountrySelector.js';
+    
+    // Initialize country selectors
+    const sourceCountry = new CountrySelector('source-country', {
+      placeholder: 'Select source language...',
+      onChange: (country) => {
+        console.log('Source country:', country);
+      }
+    });
+
+    const targetCountry = new CountrySelector('target-country', {
+      placeholder: 'Select target language...',
+      onChange: (country) => {
+        console.log('Target country:', country);
+      }
+    });
+  </script>
+  <script type="module" src="../js/translations/translations.js"></script>
+</body>
+</html>

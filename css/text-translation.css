@@ -1,0 +1,124 @@
+.translation-container {
+  padding: 1.5rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.translation-card {
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  padding: 1.5rem;
+  display: flex;
+  gap: 1rem;
+  align-items: stretch;
+}
+
+.translation-column {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+}
+
+.column-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.character-count {
+  font-size: 0.9rem;
+  color: #666;
+  display: flex;
+  gap: 0.25rem;
+  align-items: center;
+}
+
+.text-area-wrapper {
+  position: relative;
+  flex: 1;
+  display: flex;
+}
+
+textarea {
+  width: 100%;
+  min-height: 300px;
+  padding: 1rem;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-family: inherit;
+  font-size: 1rem;
+  line-height: 1.5;
+  resize: none;
+  transition: border-color 0.3s ease;
+}
+
+textarea:focus {
+  outline: none;
+  border-color: var(--primary-color);
+  box-shadow: 0 0 0 3px rgba(255, 107, 107, 0.1);
+}
+
+textarea:read-only {
+  background-color: #f8f9fa;
+  cursor: default;
+}
+
+.translation-controls {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 0 1rem;
+}
+
+.icon-btn {
+  background: none;
+  border: none;
+  padding: 0.5rem;
+  cursor: pointer;
+  color: #666;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+}
+
+.icon-btn:hover {
+  background-color: #f0f0f0;
+  color: var(--primary-color);
+}
+
+.error-message {
+  background-color: #fdecea;
+  color: #b71c1c;
+  padding: 1rem;
+  border-radius: 8px;
+  margin-top: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.error-message .material-symbols-outlined {
+  font-size: 20px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .translation-card {
+    flex-direction: column;
+  }
+
+  .translation-controls {
+    flex-direction: row;
+    justify-content: center;
+    padding: 1rem 0;
+  }
+
+  textarea {
+    min-height: 200px;
+  }
+}

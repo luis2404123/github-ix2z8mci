@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dashboard - QRLingo</title>
+  <link rel="icon" href="https://i.imgur.com/h3orAdG.png" type="image/png" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+  <link rel="stylesheet" href="css/dashboard.css" />
+  <link rel="stylesheet" href="css/components/overview.css" />
+</head>
+<body>
+  <div class="dashboard-container">
+    <!-- Sidebar -->
+    <aside class="sidebar">
+      <div class="logo">
+        <img src="https://i.imgur.com/h3orAdG.png" alt="QRLingo Logo" />
+      </div>
+      <nav class="sidebar-nav">
+        <!-- Dashboard -->
+        <div class="nav-group">
+          <div class="nav-group-header">
+            <span class="material-symbols-outlined">dashboard</span>
+            Dashboard
+            <span class="material-symbols-outlined arrow">expand_more</span>
+          </div>
+          <div class="nav-group-items">
+            <a href="pages/overview.html" class="nav-subitem">
+              <span class="material-symbols-outlined">home</span>
+              Overview
+            </a>
+            <a href="pages/analytics.html" class="nav-subitem">
+              <span class="material-symbols-outlined">analytics</span>
+              Analytics
+            </a>
+          </div>
+        </div>
+
+        <!-- Tools -->
+        <div class="nav-group">
+          <div class="nav-group-header">
+            <span class="material-symbols-outlined">build</span>
+            Tools
+            <span class="material-symbols-outlined arrow">expand_more</span>
+          </div>
+          <div class="nav-group-items">
+            <a href="pages/tools/text-translation.html" class="nav-subitem">
+              <span class="material-symbols-outlined">text_fields</span>
+              Text Translation
+            </a>
+            <a href="pages/tools/qr-scanner.html" class="nav-subitem">
+              <span class="material-symbols-outlined">qr_code_scanner</span>
+              QR Scanner
+            </a>
+            <a href="pages/tools/ocr.html" class="nav-subitem">
+              <span class="material-symbols-outlined">document_scanner</span>
+              OCR Translation
+            </a>
+            <a href="pages/tools/image-translation.html" class="nav-subitem">
+              <span class="material-symbols-outlined">image</span>
+              Image Translation
+            </a>
+          </div>
+        </div>
+
+        <!-- Translations -->
+        <div class="nav-group">
+          <div class="nav-group-header">
+            <span class="material-symbols-outlined">translate</span>
+            Translations
+            <span class="material-symbols-outlined arrow">expand_more</span>
+          </div>
+          <div class="nav-group-items">
+            <a href="pages/translations.html" class="nav-subitem">
+              <span class="material-symbols-outlined">list</span>
+              All Translations
+            </a>
+          </div>
+        </div>
+
+        <!-- QR Codes -->
+        <div class="nav-group">
+          <div class="nav-group-header">
+            <span class="material-symbols-outlined">qr_code_2</span>
+            QR Codes
+            <span class="material-symbols-outlined arrow">expand_more</span>
+          </div>
+          <div class="nav-group-items">
+            <a href="pages/qr-codes.html" class="nav-subitem">
+              <span class="material-symbols-outlined">grid_view</span>
+              All QR Codes
+            </a>
+          </div>
+        </div>
+
+        <!-- Settings -->
+        <div class="nav-group">
+          <div class="nav-group-header">
+            <span class="material-symbols-outlined">settings</span>
+            Settings
+            <span class="material-symbols-outlined arrow">expand_more</span>
+          </div>
+          <div class="nav-group-items">
+            <a href="pages/settings/profile.html" class="nav-subitem">
+              <span class="material-symbols-outlined">person_settings</span>
+              Profile
+            </a>
+            <a href="pages/settings/account.html" class="nav-subitem">
+              <span class="material-symbols-outlined">manage_accounts</span>
+              Account
+            </a>
+            <a href="pages/settings/security.html" class="nav-subitem">
+              <span class="material-symbols-outlined">security</span>
+              Security
+            </a>
+            <a href="pages/settings/notifications.html" class="nav-subitem">
+              <span class="material-symbols-outlined">notifications</span>
+              Notifications
+            </a>
+            <a href="pages/settings/billing.html" class="nav-subitem">
+              <span class="material-symbols-outlined">payments</span>
+              Billing
+            </a>
+            <a href="pages/settings/api.html" class="nav-subitem">
+              <span class="material-symbols-outlined">api</span>
+              API
+            </a>
+          </div>
+        </div>
+      </nav>
+      <button id="logout-btn" class="logout-btn">
+        <span class="material-symbols-outlined">logout</span>
+        Logout
+      </button>
+    </aside>
+
+    <!-- Main content remains the same -->
+    <main class="main-content">
+      <!-- ... existing main content ... -->
+    </main>
+  </div>
+
+  <script type="module" src="js/dashboard/dashboard.js"></script>
+</body>
+</html>

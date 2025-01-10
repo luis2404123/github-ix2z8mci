@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Settings - QRLingo</title>
+  <link rel="icon" href="https://i.imgur.com/h3orAdG.png" type="image/png" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+  <script type="module" crossorigin src="/assets/settings-DY4aFLr3.js"></script>
+  <link rel="modulepreload" crossorigin href="/assets/auth-ukEJXvp4.js">
+  <link rel="stylesheet" crossorigin href="/assets/settings-gTz-R3b6.css">
+  <link rel="stylesheet" crossorigin href="/assets/dashboard-BN8D_-Up.css">
+</head>
+<body>
+  <div class="dashboard-container">
+    <!-- Sidebar -->
+    <aside class="sidebar">
+      <div class="logo">
+        <img src="https://i.imgur.com/h3orAdG.png" alt="QRLingo Logo" />
+      </div>
+      <nav class="sidebar-nav">
+        <a href="../dashboard.html" class="nav-item">
+          <span class="material-symbols-outlined">dashboard</span>
+          Dashboard
+        </a>
+        <a href="translations.html" class="nav-item">
+          <span class="material-symbols-outlined">translate</span>
+          Translations
+        </a>
+        <a href="qr-codes.html" class="nav-item">
+          <span class="material-symbols-outlined">qr_code_2</span>
+          QR Codes
+        </a>
+        <a href="settings.html" class="nav-item active">
+          <span class="material-symbols-outlined">settings</span>
+          Settings
+        </a>
+      </nav>
+      <button id="logout-btn" class="logout-btn">
+        <span class="material-symbols-outlined">logout</span>
+        Logout
+      </button>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="main-content">
+      <header class="dashboard-header">
+        <div class="header-left">
+          <h1>Settings</h1>
+        </div>
+      </header>
+
+      <!-- Settings Sections -->
+      <div class="settings-container">
+        <!-- Profile Settings -->
+        <section class="settings-section">
+          <h2>Profile Settings</h2>
+          <form id="profile-form" class="settings-form">
+            <div class="form-group">
+              <label for="full-name">Full Name</label>
+              <input type="text" id="full-name" name="full-name" />
+            </div>
+            <div class="form-group">
+              <label for="email">Email</label>
+              <input type="email" id="email" name="email" disabled />
+            </div>
+            <button type="submit" class="primary-btn">Update Profile</button>
+          </form>
+        </section>
+
+        <!-- Password Settings -->
+        <section class="settings-section">
+          <h2>Change Password</h2>
+          <form id="password-form" class="settings-form">
+            <div class="form-group">
+              <label for="current-password">Current Password</label>
+              <input type="password" id="current-password" name="current-password" required />
+            </div>
+            <div class="form-group">
+              <label for="new-password">New Password</label>
+              <input type="password" id="new-password" name="new-password" required />
+            </div>
+            <div class="form-group">
+              <label for="confirm-password">Confirm New Password</label>
+              <input type="password" id="confirm-password" name="confirm-password" required />
+            </div>
+            <button type="submit" class="primary-btn">Change Password</button>
+          </form>
+        </section>
+
+        <!-- Notification Settings -->
+        <section class="settings-section">
+          <h2>Notification Settings</h2>
+          <form id="notification-form" class="settings-form">
+            <div class="form-group checkbox-group">
+              <input type="checkbox" id="email-notifications" name="email-notifications" />
+              <label for="email-notifications">Email Notifications</label>
+            </div>
+            <div class="form-group checkbox-group">
+              <input type="checkbox" id="translation-updates" name="translation-updates" />
+              <label for="translation-updates">Translation Updates</label>
+            </div>
+            <div class="form-group checkbox-group">
+              <input type="checkbox" id="qr-code-alerts" name="qr-code-alerts" />
+              <label for="qr-code-alerts">QR Code Alerts</label>
+            </div>
+            <button type="submit" class="primary-btn">Save Preferences</button>
+          </form>
+        </section>
+      </div>
+    </main>
+  </div>
+
+</body>
+</html>
